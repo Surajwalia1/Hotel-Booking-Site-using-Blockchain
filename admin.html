@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+</head>
+<body>
+    <header id="headerc">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">User Dashboard</a></li>
+                <li><a href="admin.html">Admin Panel</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-panel">
+        <section id="booking-management">
+            <h2>Manage Bookings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Type</th>
+                        <th>Guest</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Room - Suite</td>
+                        <td>John Doe</td>
+                        <td>2024-05-10</td>
+                        <td>Booked</td>
+                        <td>
+                            <button onclick="cancelBooking('001')">Cancel</button>
+                        </td>
+                    </tr>
+                    <!-- More rows can be added dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="maintenance-requests">
+            <h2>Maintenance Requests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Room ID</th>
+                        <th>Issue</th>
+                        <th>Reported On</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>10</td>
+                        <td>A/C not working</td>
+                        <td>2024-04-25</td>
+                        <td>Pending</td>
+                        <td>
+
+                            <button onclick="resolveMaintenance('101')">Resolve</button>
+                        </td>
+                    </tr>
+                    <!-- More rows can be added dynamically -->
+                </tbody>
+            </table>
+        </section>
+        <div>
+            <h2>Add Room</h2>
+            <label for="roomName">Room Name:</label>
+            <input type="text" id="roomName" placeholder="Enter Room Name">
+            <label for="room-type">Room Type:</label>
+                <select id="roomType" name="roomType">
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+            <button onclick="addRoom()">Add Room</button>
+        </div>
+
+        <div>
+            <h2>Cancel Room</h2>
+            <label for="roomidc">Room Id:</label>
+            <input type="number" id="roomidc" placeholder="Enter Room id">
+            <!-- <label for="room-type">Room Type:</label> -->
+                <!-- <select id="roomType" name="roomType">
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select> -->
+            <button onclick="cancelBooking()">cancel Room</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Walia & Modak Booking. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:Waliabookings@gmail.com">Waliabookings@gmail.com</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

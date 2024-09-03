@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Room</a></li>
+                <li><a href="#hall">Book Party Hall</a></li>
+                <li><a href="#buffet">Book Buffet</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="book-room">
+            <h2>Book a Room</h2>
+            <img src="roomb.jpg" alt="rehle aja" style="width:30%; height:100%; margin:0 auto;"><br><br>
+            
+                <label for="room-id">Room ID:</label>
+                <input type="number" id="room-id" name="room-id" min="1" required>
+        
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type">
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+        
+                <label for="nights">Nights:</label>
+                <input type="number" id="nights" name="nights" min="1" value="1">
+        
+                <button  onclick="bookRoom()">Book Now</button>
+           
+        </section>
+        
+        <section id="hall">
+            <h2>Book Party Hall</h2>
+            <img src="hallb.jpg" alt="lo karlo party" style="width:30%; height:auto;"><br><br>
+            <form id="hall-booking-form">
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" name="date">
+        
+                <label for="duration">Duration (Hours):</label>
+                <input type="number" id="duration" name="duration" min="1" value="1">
+        
+                <button type="submit">Book Hall</button>
+            </form>
+        </section>
+
+        <section id="buffet">
+            <h2>Book Buffet</h2>
+            <img src="buffetb.jpg" alt="majedar khaana" style="width:30%; height:auto;"><br><br>
+            <form id="buffet-booking-form">
+                <label for="buffet-date">Buffet Date:</label>
+                <input type="date" id="buffet-date" name="buffet-date">
+        
+                <label for="attendees">Number of Attendees:</label>
+                <input type="number" id="attendees" name="attendees" min="1" value="10">
+        
+                <button type="submit">Book Buffet</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Walia & Coupon Booking. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:Waliabookings@gmail.com">Waliabookings@gmail.com</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

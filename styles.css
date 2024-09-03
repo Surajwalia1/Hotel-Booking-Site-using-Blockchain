@@ -1,0 +1,303 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 10%;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+header.scrolled {
+    background-color: #003366;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.banner {
+    background: url('hotel-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+}
+
+.banner p {
+    font-size: 24px;
+}
+
+.banner button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #003366;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.service-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background-color: #f4f4f4;
+}
+
+.service {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 30%;
+    text-align: center;
+}
+
+footer {
+    background-color: #003366;
+    color: lightgrey;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* booking css */
+
+main {
+    padding: 20px;
+    margin-top: 80px; /* Make space for the fixed header */
+}
+
+section {
+    margin-bottom: 40px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+input[type="number"], select {
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+h2 {
+    color: #003366;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+
+/* 
+dashboard css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+
+
+/* admin css */
+
+.admin-panel {
+    padding: 20px;
+    margin-top: 80px; /* Make space for the fixed header */
+}
+
+.admin-panel h2 {
+    color: #003366;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+
+/* contact css */
+#headerc {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 10%;
+    box-sizing: border-box;
+    background-color: #003366;
+}
+main {
+    padding: 20px;
+    margin-top: 80px; /* Offset for the fixed header */
+}
+
+#contact-form-section {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    border-radius: 8px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 150px;
+    resize: none; /* Prevents resizing the textarea */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #003366;
+}

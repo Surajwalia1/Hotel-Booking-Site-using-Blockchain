@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+</head>
+<body>
+    <header id="headerc">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Make a Booking</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="current-bookings">
+            <h2>Current Bookings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="current-bookings-body">
+                    <tr>
+                        <td>Room - Suite</td>
+                        <td>2024-05-10</td>
+                        <td>2024-05-15</td>
+                        <td>Booked</td>
+                        <td><button onclick="cancelBooking(this)">Cancel</button></td>
+                    </tr>
+                    <!-- More rows can be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="past-bookings">
+            <h2>Past Bookings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="past-bookings-body">
+                    <tr>
+                        <td>Room - Double</td>
+                        <td>2024-01-20</td>
+                        <td>2024-01-25</td>
+                        <td>Completed</td>
+                    </tr>
+                    <!-- More rows can be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="services">
+            <h2>Request Services</h2>
+            <button onclick="requestRoomService()">Request Room Service</button>
+            <label for="roomIdM">Room ID:</label>
+                <input type="number" id="roomIdM" name="room-id" min="1" required>
+            <button onclick="requestMaintenance()">Request Maintenance</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Walia & Modak Booking. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:Waliabookings@gmail.com">Waliabookings@gmail.com</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
